@@ -1,0 +1,22 @@
+# venv directory
+venv/
+
+# Compiled Python files
+__pycache__/
+
+# IDE-specific files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+*.code-workspace
+*.iml
+*.pyc
+*.pyo
+
+# Compiled bytecode (Python 3)
+__pycache__/
+
+# Environment variable files
+.env
+
+# Log files
+*.log
