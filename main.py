@@ -1,3 +1,4 @@
+from generate import generate
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
@@ -8,18 +9,31 @@ load_dotenv()
 # establish openai api client connection
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# # Your prompt and API call remain unchanged
-prompt = "You are on a date with someone you just met. Start a conversation about interests and hobbies."
+def main():
+    # print introduction screen
+    with open('startup.txt', 'r') as startup:
+        for line in startup.readlines():
+            print(line.strip())
 
-stream = client.chat.completions.create(
-  model="gpt-3.5-turbo",
-  messages=[
-    {"role": "system", "content": "You are a helpful and flirty dating assistant. You are smart but also kind and funny, and like to banter."},
-    {"role": "user", "content": "Give me a clever icebreaker message for a dating app."},
-  ],
-  stream=True
-)
+    # get first user input
+    user_input = input('||  ')
+    if user_input == '1':
+        # print instructions
+        with open('instruction_files/generate_new_icebreaker.txt', 'r') as instructions:
+            for line in instructions.readlines():
+                print(line.strip())
+    elif user_input == '2':
+        with open('instruction_files/filepath_instructions.txt', 'r') as instructions:
+            print("||   Enter file path here: ")
+            filepath = input('||    ')
+            for line in instructions.readlines():
+                print(line.strip())
 
-for chunk in stream:
-    if chunk.choices[0].delta.content is not None:
-        print(chunk.choices[0].delta.content, end="")
+    # get second user input
+    user_input = input('||  ')
+    if user_input == '1':
+        print(f"||  Here's a good icebreaker: \n")
+        generate(client)
+
+if __name__ == "__main__":
+    main()

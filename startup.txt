@@ -1,0 +1,21 @@
+||----------------------------------------------------------------------------------------------||
+|	Welcome to Charizzma
+|	- Use this app to generate fun text responses to a potential dating partner.
+|	- You could generate a witty opening message, or fun and flirty text responses
+|	  to to an ongoing conversation :)
+|	- You have a life to live! Save many hours of your time by letting AI do the
+|	  conversational work of dating apps for you.
+|	- Generate your messages in just three short steps. If you have an idea of a tone or
+|	  mood you would like to portray, you may define that. The only limit is your imagination :)
+|	- Keep in mind any text generation may experience slight delays based on current network
+|	  load. But rest assured, your own personal AI assistant is hard at work behind the scenes.
+|	
+|	[NEW FEATURES LISTED HERE]
+|
+|	Please choose one of the following:
+|
+|	---> Press 1 for Charizzma to generate an icebreaker for a new conversation.
+|
+|	---> Press 2 to enter a filepath containing a screenshot or text of a previous
+|	conversation which you would like Charizzma to continue.
+||----------------------------------------------------------------------------------------------||
