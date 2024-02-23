@@ -5,7 +5,7 @@
 |
 |	1. Press 1 again for Charizzma to generate a completely fresh ice breaker.
 |
-|	2. Enter some text description to provide more context as to the conversation you would 
-|	like to initiate, or additional details of the person for whom you would like an
-|	icebreaker (name, age, likes/interests, etc.).
+|	2. Press 2 and then enter some text description to provide more context as to the
+|      conversation you would like to initiate, or additional details of the person
+|      for whom you would like an icebreaker (name, age, likes/interests, etc.).
 ||----------------------------------------------------------------------------------------------||

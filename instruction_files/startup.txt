@@ -11,11 +11,15 @@
 |	  load. But rest assured, your own personal AI assistant is hard at work behind the scenes.
 |	
 |	[NEW FEATURES LISTED HERE]
+|   - Users can now add text from a previous conversation so your AI assistant can
+|     continue the conversation.
 |
 |	Please choose one of the following:
 |
 |	---> Press 1 for Charizzma to generate an icebreaker for a new conversation.
 |
-|	---> Press 2 to enter a filepath containing a screenshot or text of a previous
+|	---> Press 2 to enter a filepath containing text of a previous
 |	conversation which you would like Charizzma to continue.
+|
+|   ---> Press 3 to adjust settings.
 ||----------------------------------------------------------------------------------------------||

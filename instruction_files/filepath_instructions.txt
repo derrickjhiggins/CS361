@@ -6,6 +6,6 @@
 |	1. Press enter for Charizzma to read the image or text and generate a new message
 |	without any additional context or direction.
 |
-|	2. If you would like to add additional context or direction/tone to your message,
-|	please type this and then press Enter.
+|	2. Press 2 if you would like to add additional context or direction/tone to your message
+|      and then enter your additional context.
 ||----------------------------------------------------------------------------------------------||
