@@ -21,5 +21,7 @@
 |	---> Press 2 to enter a filepath containing text of a previous
 |	conversation which you would like Charizzma to continue.
 |
-|   ---> Press 3 to adjust settings.
+|   ---> Press 3 to translate a message you received to another language.
+|
+|   ---> Press 4 to adjust settings.
 ||----------------------------------------------------------------------------------------------||

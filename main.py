@@ -1,5 +1,6 @@
 import os
 import sys
+import requests
 from dotenv import load_dotenv
 
 from openai import OpenAI
@@ -8,8 +9,9 @@ from generate import generate
 # Load environment variables from .env file
 load_dotenv()
 
-# establish openai api client connection
+# establish openai api client connection and translation api connection
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+api_url = 'http://localhost:5000/translate'
 
 def getFirstInput():
     # get first user input
@@ -26,10 +28,16 @@ def getFirstInput():
             for line in instructions.readlines():
                 print(line.strip())
     elif user_input == '3':
+        text_to_translate = input('|| Enter text to be translated here: ')
+        target_language = input('|| What is your target language? ')
+        translate(text_to_translate, target_language)
+    elif user_input == '4':
         with open('instruction_files/settings.txt', 'r') as settings:
             for line in settings.readlines():
                 print(line.strip())
             sys.exit()
+
+
     elif user_input == chr(27):
         print("|| Goodbye for now!")
         sys.exit()
@@ -48,6 +56,18 @@ def getSecondInput(filepath):
     else:
         additionalDirections = input('|| ')
         generate(client, filepath, additionalDirections)
+
+def translate(text, target_language):
+    payload = {
+    'text': text,
+    'target_language': target_language
+    }
+    response = requests.post(api_url, json=payload)
+    if response.status_code == 200:
+        translated_text = response.json()['translated_text']
+        print(f'Translated Text: {translated_text}')
+    else:
+        print(f'Error: {response.status_code}, {response.text}')
 
 def main():
     # print introduction screen
