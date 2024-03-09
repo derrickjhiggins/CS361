@@ -36,8 +36,6 @@ def getFirstInput():
             for line in settings.readlines():
                 print(line.strip())
             sys.exit()
-
-
     elif user_input == chr(27):
         print("|| Goodbye for now!")
         sys.exit()
