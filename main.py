@@ -31,6 +31,7 @@ def getFirstInput():
         text_to_translate = input('|| Enter text to be translated here: ')
         target_language = input('|| What is your target language? ')
         translate(text_to_translate, target_language)
+        sys.exit()
     elif user_input == '4':
         with open('instruction_files/settings.txt', 'r') as settings:
             for line in settings.readlines():
@@ -63,9 +64,9 @@ def translate(text, target_language):
     response = requests.post(api_url, json=payload)
     if response.status_code == 200:
         translated_text = response.json()['translated_text']
-        print(f'Translated Text: {translated_text}')
+        print(f'|| Translated Text: {translated_text}')
     else:
-        print(f'Error: {response.status_code}, {response.text}')
+        print(f'|| Error: {response.status_code}, {response.text}')
 
 def main():
     # print introduction screen
